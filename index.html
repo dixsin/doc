@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EasyCore - Документация с изменениями</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <style>
+        body{
+            background-color: black; /* Цвет фона веб-страницы */
+        } 
+        h1, h2, h3, h4, h5, h6{
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        p{
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a{
+            color: white;
+            margin: 1%;
+            width: 340px;
+        }
+        .qiwi{
+            border-radius: 10px;
+        }
+        pre{
+            color: white;
+        }
+        .codeheader{
+            background-color: white;
+            color: #bb00d4;
+            border-radius: 8px;
+        }
+        .code{
+            background-color: white;
+            color: black;
+            border-radius: 8px;
+        }
+        .footer{
+            color: gray;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+        }
+        .mon{
+            font-family: 'Montserrat', sans-serif;
+        }
+  </style>
+    </head>
+    <body>
+        <div class="container">
+            <p class="mb-3"></p>
+            <h1 class="text-center mb-5">
+                EasyCore <small>Documentation</small>
+            </h1>
+            <p class="text-center">Данная документация предоставляет всю важную информацию для использования софта от EasyTeam</p>
+            <a class="btn btn-primary btn-lg btn-block align-items-center mp-5 mb-5 mon" href="https://dixsin.github.io/index" role="button">Оффициальный сайт</a>
+            <h1 class="text-center">Софт был разработан с помощью</h1>
+            <img src="https://sun9-22.userapi.com/impg/Lnn9VP3BviveQHA5XwkKVlgILhnxgXCtZVioSg/TEL_4hyDU3w.jpg?size=1000x680&quality=96&sign=5af256fbf3ca073af8991bd278d2ba5d&type=album" width="100%"/>
+            <h2 class="text-center mb-5">and</h2>
+            <img class="mb-5 qiwi" src="https://avada-media.ua/wp-content/uploads/2020/12/php-l.png" width="100%"/>
+            <h2 class="text-center">
+                Основная конфигурация ядра
+            </h2>
+            <h3 class="text-center codeheader">server.properties</h3>
+            <pre class="text-center code mb-5">
+#Properties Config file
+#Thu May 4 19:08:15 MSK 2023
+motd=:Название сервера
+server-port=Порт сервера (19132)
+white-list=Белый список (on/off)
+announce-player-achievements=Достижения
+spawn-protection=Защита спавна, Выкл - 0
+max-players=Максимальное кол-во игроков
+allow-flight=Полет с читами (off)
+spawn-animals=Спавн животных (off)
+spawn-mobs=Спавн мобов (off)
+gamemode=Стандартный режим игры (0/1/2)
+force-gamemode=/gm (0/1/2)
+hardcore=Одна жизнь (off)
+pvp=Разрешение к pvp (on)
+difficulty=Сложность (1 - мирно)
+generator-settings= Настройки генерации
+level-name=Название мира (world)
+level-seed=Сид мира (null)
+level-type=Тип генерации (DEFAULT)
+enable-query=Передача по query (on)
+enable-rcon=Управление по rcon (off)
+rcon.password=Пароль от rcon (string)
+auto-save=Авто-сохранение мира (on)
+online-mode=Проверка на лицензию (off)
+view-distance=Прорисовка чанков (8)
+
+            </pre>
+            <h2 class="text-center">Как выглядит обычный плагин для ядра EasyCore</h2>
+            <h3 class="text-center codeheader">Main.php</h3>
+            <pre class="text-left code mb-5">
+ namespace plugin;
+
+ use pocketmine\plugin\PluginBase;
+
+ class Main extends PluginBase{
+	public function onEnable(){
+		$this->getLogger()->info("Hello world!");
+	}
+ }
+            </pre>
+            <h3 class="text-center codeheader">plugin.yml</h3>
+            <pre class="text-left code mb-5">
+ name: ExamplePlugin
+ main: plugin\Main
+ api: 2.0.0 //Обязательно используйте 2.0.0
+ version: 1.0 //Версия плагина
+ author: dixsin //Автор плагина
+            </pre>
+            <h3 class="text-center mb-5">Ниже вы можете увидеть изменения софта!</h3>
+            <img class="mb-5 qiwi" src="https://yt3.googleusercontent.com/ytc/AL5GRJVbA5VMoyScroWU8dlJSZGesx-B90J_bKua0OTn=s900-c-k-c0x00ffffff-no-rj" width="100%"/>
+            <h2 class="text-center">Что мы хотим сделать в ближайшем времени?</h2>
+            <pre class="text-left code mb-5">
+ Оптимизация - [❌] На стадии разработки!
+ Моб-система - [❌] На стадии разработки!
+ Фикс ванильности - [❌] На стадии разработки!
+ Многопоточность - [❌] На стадии разработки!
+ Изменить систему событий - [❌] На стадии разработки!
+ Полностью изменить систему нагрузки на сервер - [❌] На стадии разработки! 
+ Переписать систему чанков - [❌] На стадии разработки!
+ Изменить генерацию миров DEFAULT - [❌] На стадии разработки!
+ Оптимизировать систему тасков - [❌] На стадии разработки!
+            </pre>
+            <h2 class="text-center">Что мы сделали в самой новой версии ядра?</h2>
+            </h2>
+            <pre class="text-left code mb-5">
+ Список изменений для серверного ПО EasyCore версии 1.1.4:
+
+ - Исправлены некоторые проблемы, связанные со стабильностью сервера
+ - Исправлены ошибки, которые могли приводить к падению сервера при большой нагрузке
+ - Добавлена поддержка новых команд, которые позволяют управлять игроками и настройками сервера 
+ - Улучшена производительность и общая эффективность работы сервера
+ - Исправлены некоторые ошибки в коде, которые могли вызывать неправильное поведение сервера
+
+ Это основные изменения, которые были внесены в версию EasyCore 1.1.4.
+            </pre>
+        </div>
+        <div class="container">
+            <footer>
+                <p class="text-center mb-4 footer">EasyTeam (c) 2023</p>
+            </footer>
+        </div>
+    </body>
+</html>
